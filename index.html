@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="sheet.css">
+    <script src="script.js" defer></script>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <div class="container">
+        <div class="header">
+            <div class="header-left-side">
+                <img src="icon/bookshelf.png" alt="">
+                <h1>The Book Tracker</h1>
+            </div>
+            <div class="header-right-side">
+                <p class="hrl">Link-1</p>
+                <p class="hrl">Link-2</p>
+                <p class="hrl">Link-3</p>
+            </div>
+        </div>
+        <div class="sidebar">
+            <div class="logo">
+                <img src="icon/book.png" alt="">
+                <h1>Book Entry</h1>
+            </div>
+            <div class="form-block">
+                <form>
+                    <fieldset class="form-element-book">
+                        <legend>Book Entry</legend>
+                        <div class="book-name-entry">
+                            <label for="book-name">Book Title:</label>
+                            <input type="text" id="book-name" placeholder="Harry Potter" required>
+                            <span></span>
+                        </div>
+                        <div class="authour-name-entry">
+                            <label for="authour-name">Authour Name:</label>
+                            <input type="text" id="authour-name" placeholder="Authour" required >
+                        </div>
+                        <div class="total-no-of-pages">
+                            <label for="total-pages">Total Pages:</label>
+                            <input type="number" id="total-pages" placeholder="100" required  >
+                        </div>
+                        <div class="no-of-pages-read">
+                            <label for="pages-read">Pages Read:</label>
+                            <input type="number" id="pages-read" placeholder="77">
+                        </div>
+                        <div class="book-completed-status">
+                            <label for="read-status">Have you read the Book?</label>
+                            <input type="checkbox" id="read-status">
+                        </div>
+                        <div class="favorite-quote-on-book">
+                            <label for="fav-quote">Favorite Quote:</label>
+                            <textarea name="" id="fav-quote"></textarea>
+                        </div>
+                        <button type="submit" class="form-submit-button">Submit</button>
+                    </fieldset>
+                </form>
+            </div>
+        </div>
+        <div class="main-body">
+            <!-- <div class="book-1">
+                <h1 class="book-titl3">The Harry Potter</h1>
+                <h4 class="authour-name">Authour: J.k Rowlings</h4>
+                <p class="total-pages">Total pages: 100</p>
+                <p class="total-pages-completed">Pages Read: 50</p>
+                <p class="fav-quote">Lorem, ipsum dolor sit amet consectetur adipisicing elit. Iste, fugiat nemo vero dignissimos repellat possimus dolore atque, in similique autem, quas quis. Id fugiat, nemo veniam tempora modi numquam dolorum?</p>
+
+                <div class="progress-bar">
+                    <label for="file" class="filee">Progress:</label>
+                    <progress id="file" value="0" max="100">  </progress>
+                </div>
+                <div class="last-one">
+                    <button class="edit">Edit</button>
+                    <button class="edit">Remove</button>
+                    <div>
+                        <label for="lasdkj" class="lasflsa">Read:</label>
+                        <input type="checkbox" class="completed-toggle" id="lasdkj">
+                        <div class="ape"></div>
+                    </div>
+                </div>
+            </div> -->
+        </div>
+        <div class="aside"></div>
+    </div>
+</body>
+</html>
