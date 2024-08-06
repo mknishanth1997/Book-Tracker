@@ -39,7 +39,7 @@ body {
 .form-block {
     width: 300px;
     /* border: 5px solid orange; */
-}
+  }
 .form-block legend {
     margin-bottom: 25px;
 }
@@ -194,9 +194,10 @@ form {
   display: grid;
   grid-template-columns: repeat(auto-fill, 500px);
   grid-auto-rows: min-content;
-  grid-gap: 32px;
   justify-content: center;
   padding-top: 50px;
+  gap: 64px 32px;
+  overflow: auto;
 }
 
 .book-1
@@ -284,4 +285,52 @@ form {
   0 8px 8px hsl(0deg 0% 0% / 0.075),
   0 16px 16px hsl(0deg 0% 0% / 0.075);
   border-radius: 15px;
+}
+
+
+
+/* Tabular Data */
+
+.tabular-data {
+  border: solid;
+  margin: 16px;
+  margin-top: 32px;
+  padding: 8px;
+  display: grid;
+  grid-template-columns: 150px max-content;
+  grid-auto-rows: min-content;
+  gap: 16px;
+  place-content: center;
+  align-items: center;
+  
+}
+.tabular-data > * {
+  margin: 0;
+  /* border: solid; */
+}
+
+.tab-data {
+  font-size: 20px;
+}
+.actual-data {
+  font-size: 32px;
+  font-weight: bold;
+}
+.buttons {
+  display: grid;
+  gap: 16px;
+  padding: 16px;
+}
+.buttons *  {
+   padding: 8px;
+   border-radius: 8px;
+}
+.remove-All, .unread-All {
+  background: linear-gradient(to bottom, #FF6961, #C82323);
+}
+.display-All, .read-All {
+  background: linear-gradient(to bottom, #90EE90, #32CD32);
+}
+.ascend-All, .descend-All {
+  background-color: #9750DD;
 }
