@@ -154,7 +154,7 @@ createdApe.classList.add('ape');
 createdLabelForProgressBar.setAttribute("for", "file");
 createdActualProgressBar.setAttribute("id", "file");
 createdActualProgressBar.setAttribute("value", "");
-createdActualProgressBar.setAttribute("max", "100");
+createdActualProgressBar.setAttribute("max", "");
 createdSubDivLabel.setAttribute("for", "lasdkj");
 createdSubDivInput.setAttribute("type", "checkbox");
 createdSubDivInput.setAttribute("id", "lasdkj");
@@ -196,6 +196,7 @@ createdRemoveButton.innerText = "Remove";
 createdSubDivLabel.innerText = "Read:";
 createdLabelForProgressBar.innerText = "Progress:";
 createdActualProgressBar.value = `${books[arrayIndex].pagesRead}`;
+createdActualProgressBar.max = `${books[arrayIndex].totalPages}`;
 createdSubDivInput.checked = books[arrayIndex].readStatus;
 createdSubDivInput.addEventListener("click", () => changeTheReadStatus(createdSubDivInput.checked, createdTotalPagesCompleted, arrayIndex,createdActualProgressBar ));
 createdRemoveButton.addEventListener("click",() => removeTheBook(createdBook1, arrayIndex));
@@ -212,6 +213,11 @@ createdEditButton.addEventListener("click", () =>
         createdActualProgressBar,
         createdSubDivInput
     ));
+
+
+// Setting Colors: 
+createdApe.style.background = assingApeColor(arrayIndex);
+createdBookName.style.color = assingTextColor(arrayIndex);
 return createdBook1;
 }
 
@@ -222,7 +228,7 @@ function changeTheReadStatus (readStatus, createdTotalPages, arrayIndex, progres
         books[arrayIndex].readStatus = true;
         books[arrayIndex].pagesRead = books[arrayIndex].totalPages;
         createdTotalPages.innerText = `Pages Read: ${books[arrayIndex].pagesRead}`;
-        progressBar.value = 100;
+        progressBar.value = books[arrayIndex].totalPages;
         updateTheTabularData();
     }
     else if(readStatus === false)
@@ -426,41 +432,65 @@ function doDescendingOrder()
     console.log("descend Function");
 }
 
+// Ape Background Color
+
+function assingApeColor(arrayIndex)
+{
+    let copiedArrayIndex = arrayIndex;
+    const arrayOfColors = [
+        "linear-gradient(45deg, #FFE066, #F8C846)",
+        "linear-gradient(45deg, #FF9C7A, #E67349)",
+        "linear-gradient(45deg, #A89285, #7F6C65)",
+        "linear-gradient(45deg, #6FC765, #489646)",
+        "linear-gradient(45deg, #58C7E3, #3698AF)",
+        "linear-gradient(45deg, #4482C3, #285A88)",
+        "linear-gradient(45deg, #8A9DC0, #61758A)",
+        "linear-gradient(45deg, #A57DBE, #744C88)",
+        "linear-gradient(45deg, #FF5BAA, #D33C82)"
+    ];
+
+    if(copiedArrayIndex > 8)
+    {
+        copiedArrayIndex = 0;
+    }
+
+    return arrayOfColors[copiedArrayIndex];
+}
+
+function assingTextColor(arrayIndex)
+{
+    let copiedArrayIndex = arrayIndex;
+    const arrayOfColors = [
+        "#FFF00",
+        "#FF8D33",
+        "#FFC233",
+        "#FFEB33",
+        "#D4FF33",
+        "#33FF57",
+        "#33FFBD",
+        "#33D4FF",
+        "#3357FF"
+    ];
+
+    if(copiedArrayIndex > 8)
+    {
+        copiedArrayIndex = 0;
+    }
+
+    return arrayOfColors[copiedArrayIndex];
+}
 
 
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+function createBookObject(bookName, authourName, totalPages, pagesRead, readStatus, quote)
+{
+    this.bookName = bookName;
+    this.authourName = authourName;
+    this.totalPages = totalPages;
+    this.pagesRead = pagesRead;
+    this.readStatus = readStatus;
+    this.quote = quote;
+}
 
 
 function yetAnotherCreationOfBooks(SingleObject, arrayIndex)
@@ -562,5 +592,8 @@ function yetAnotherCreationOfBooks(SingleObject, arrayIndex)
             createdActualProgressBar,
             createdSubDivInput
         ));
+        // Setting Colors: 
+createdApe.style.background = assingApeColor(arrayIndex);
+createdBookName.style.color = assingTextColor(arrayIndex);
     return createdBook1;
 }

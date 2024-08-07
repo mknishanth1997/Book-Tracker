@@ -1,12 +1,152 @@
+.poppins-thin {
+  font-family: "Poppins", sans-serif;
+  font-weight: 100;
+  font-style: normal;
+}
+
+.poppins-extralight {
+  font-family: "Poppins", sans-serif;
+  font-weight: 200;
+  font-style: normal;
+}
+
+.poppins-light {
+  font-family: "Poppins", sans-serif;
+  font-weight: 300;
+  font-style: normal;
+}
+
+.poppins-regular {
+  font-family: "Poppins", sans-serif;
+  font-weight: 400;
+  font-style: normal;
+}
+
+.poppins-medium {
+  font-family: "Poppins", sans-serif;
+  font-weight: 500;
+  font-style: normal;
+}
+
+.poppins-semibold {
+  font-family: "Poppins", sans-serif;
+  font-weight: 600;
+  font-style: normal;
+}
+
+.poppins-bold {
+  font-family: "Poppins", sans-serif;
+  font-weight: 700;
+  font-style: normal;
+}
+
+.poppins-extrabold {
+  font-family: "Poppins", sans-serif;
+  font-weight: 800;
+  font-style: normal;
+}
+
+.poppins-black {
+  font-family: "Poppins", sans-serif;
+  font-weight: 900;
+  font-style: normal;
+}
+
+.poppins-thin-italic {
+  font-family: "Poppins", sans-serif;
+  font-weight: 100;
+  font-style: italic;
+}
+
+.poppins-extralight-italic {
+  font-family: "Poppins", sans-serif;
+  font-weight: 200;
+  font-style: italic;
+}
+
+.poppins-light-italic {
+  font-family: "Poppins", sans-serif;
+  font-weight: 300;
+  font-style: italic;
+}
+
+.poppins-regular-italic {
+  font-family: "Poppins", sans-serif;
+  font-weight: 400;
+  font-style: italic;
+}
+
+.poppins-medium-italic {
+  font-family: "Poppins", sans-serif;
+  font-weight: 500;
+  font-style: italic;
+}
+
+.poppins-semibold-italic {
+  font-family: "Poppins", sans-serif;
+  font-weight: 600;
+  font-style: italic;
+}
+
+.poppins-bold-italic {
+  font-family: "Poppins", sans-serif;
+  font-weight: 700;
+  font-style: italic;
+}
+
+.poppins-extrabold-italic {
+  font-family: "Poppins", sans-serif;
+  font-weight: 800;
+  font-style: italic;
+}
+
+.poppins-black-italic {
+  font-family: "Poppins", sans-serif;
+  font-weight: 900;
+  font-style: italic;
+}
+.rubik-mono-one-regular {
+  font-family: "Rubik Mono One", monospace;
+  font-weight: 400;
+  font-style: normal;
+}
+.permanent-marker-regular {
+  font-family: "Permanent Marker", cursive;
+  font-weight: 400;
+  font-style: normal;
+}
+.freehand-regular {
+  font-family: "Freehand", cursive;
+  font-weight: 400;
+  font-style: normal;
+}
+
+
 body {
     margin: 0;
     height: 100vh;
     background-color: #D6DBDF;
+    font-family: Poppins;
+    box-sizing: border-box;
 }
 .header, .sidebar, .main-body, .aside, .footer {
-    border: 2px solid hotpink;
+    /* border: 2px solid hotpink; */
     width: 100%;
     height: 100%;
+}
+
+.sidebar {
+  background-color: aqua;
+}
+.header {
+  background-color: #ffffff;
+  box-shadow:
+0 1px 1px hsl(0deg 0% 0% / 0.075),
+0 2px 2px hsl(0deg 0% 0% / 0.075),
+0 4px 4px hsl(0deg 0% 0% / 0.075),
+0 8px 8px hsl(0deg 0% 0% / 0.075),
+0 16px 16px hsl(0deg 0% 0% / 0.075);
+
 }
 
 .container {
@@ -21,6 +161,7 @@ body {
 }
 .header {
     grid-area: header;
+    /* background-color: #E2E8F0; */
 }
 .sidebar {
     grid-area: sidebar;
@@ -28,9 +169,11 @@ body {
 }
 .main-body {
     grid-area: main-body;
+    background-color: #E2E8F0;
 }
 .aside {
     grid-area: aside;
+    background-color: #E2E8F0;
 }
 
 
@@ -93,6 +236,7 @@ textarea#fav-quote {
 
 form {
     font-size: 1rem;
+    
   }
   
   legend {
@@ -125,6 +269,8 @@ form {
     display: grid;
     justify-content: center;
     grid-template-rows: 150px;
+    background-color: #E0F7FA; /* Light Cyan */
+    color: #00796B;
   }
 
 
@@ -137,6 +283,8 @@ form {
   .header {
     display: flex;
     justify-content: space-between;
+    background-color: #2C3E50; /* Dark Blue-Gray */
+    color: white;
   }
   .header-left-side {
     display: flex;
@@ -150,8 +298,11 @@ form {
     display: flex;
     margin-right: 150px;
     gap: 50px;
-    font-size: 24px;
+    font-size: 1.2rem;
     align-items: center;
+  }
+  .header-right-side > *:hover {
+    text-decoration: underline;
   }
 /* Toggle Button */
   .completed-toggle {
@@ -198,24 +349,30 @@ form {
   padding-top: 50px;
   gap: 64px 32px;
   overflow: auto;
+  box-sizing: border-box;
+  position: relative;
 }
+
 
 .book-1
 {
   display: grid;
   justify-content: center;
-  text-align: center;
+  text-align: left;
   font-size: 18px;
   padding: 32px;
   position: relative;
-  background-color: #E4E8EB;
+  background-color: #FFEFD5;
   border-radius: 15px;
-  box-shadow:
+  /* box-shadow:
 0 1px 1px hsl(0deg 0% 0% / 0.075),
 0 2px 2px hsl(0deg 0% 0% / 0.075),
 0 4px 4px hsl(0deg 0% 0% / 0.075),
 0 8px 8px hsl(0deg 0% 0% / 0.075),
-0 16px 16px hsl(0deg 0% 0% / 0.075);
+0 16px 16px hsl(0deg 0% 0% / 0.075); */
+border: 1px solid #FFEFD5;
+color: #333; 
+box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
 }
 .book-1 > * {
   /* border: solid;*/
@@ -226,6 +383,16 @@ form {
   padding-top: 25px;
   padding-bottom: 25px;
   color: green;
+  text-align: center;
+  text-shadow: 1px 1px 0 #ccc,
+2px 2px 0 #ccc,
+3px 3px 0 #ccc,
+4px 4px 0 #ccc,
+5px 5px 0 #ccc,
+6px 6px 0 #ccc;
+/* text-shadow: 2px 2px 4px black; */
+font-family: "Permanent Marker" ;
+/* font-family: "Rubik Mono One" ; */
 }
 .authour-name, .total-pages, .total-pages-completed {
   font-size: 20px;
@@ -235,6 +402,7 @@ form {
   font-size: 20px;
   margin-top: 16px;
   margin-bottom: 16px;
+  font-family: Freehand;
 }
 #file {
   height: 40px;
@@ -254,6 +422,29 @@ form {
   font-size: 24px;
   padding:  8px 32px;
   border-radius: 15px;
+}
+.edit:nth-child(1)
+{
+  background: linear-gradient(to bottom, #FF6961, #C82323);
+  border: none;
+  box-shadow:
+  0 1px 1px hsl(0deg 0% 0% / 0.075),
+  0 2px 2px hsl(0deg 0% 0% / 0.075),
+  0 4px 4px hsl(0deg 0% 0% / 0.075),
+  0 8px 8px hsl(0deg 0% 0% / 0.075),
+  0 16px 16px hsl(0deg 0% 0% / 0.075);
+}
+.edit:nth-child(2)
+{
+  background: linear-gradient(to bottom, #90EE90, #32CD32);
+  border: none;
+  box-shadow:
+  0 1px 1px hsl(0deg 0% 0% / 0.075),
+  0 2px 2px hsl(0deg 0% 0% / 0.075),
+  0 4px 4px hsl(0deg 0% 0% / 0.075),
+  0 8px 8px hsl(0deg 0% 0% / 0.075),
+  0 16px 16px hsl(0deg 0% 0% / 0.075);
+
 }
 .last-one {
   display: flex;
@@ -292,7 +483,7 @@ form {
 /* Tabular Data */
 
 .tabular-data {
-  border: solid;
+  /* border: solid; */
   margin: 16px;
   margin-top: 32px;
   padding: 8px;
@@ -302,7 +493,18 @@ form {
   gap: 16px;
   place-content: center;
   align-items: center;
-  
+  background-color: #ffffff;
+  border-radius: 25px;
+  box-shadow: 20px 20px 20px 0px rgba(0, 0, 0, 0.5); 
+  box-shadow:
+  0 1px 1px hsl(0deg 0% 0% / 0.075),
+  0 2px 2px hsl(0deg 0% 0% / 0.075),
+  0 4px 4px hsl(0deg 0% 0% / 0.075),
+  0 8px 8px hsl(0deg 0% 0% / 0.075),
+  0 16px 16px hsl(0deg 0% 0% / 0.075);
+  overflow: hidden;
+  position: relative;
+  z-index: 1;
 }
 .tabular-data > * {
   margin: 0;
@@ -320,10 +522,27 @@ form {
   display: grid;
   gap: 16px;
   padding: 16px;
+  background-color: #ffffff;
+  border-radius: 25px;
+  margin: 16px;
+  box-shadow: 20px 20px 20px 0px rgba(0, 0, 0, 0.5); 
+  box-shadow:
+  0 1px 1px hsl(0deg 0% 0% / 0.075),
+  0 2px 2px hsl(0deg 0% 0% / 0.075),
+  0 4px 4px hsl(0deg 0% 0% / 0.075),
+  0 8px 8px hsl(0deg 0% 0% / 0.075),
+  0 16px 16px hsl(0deg 0% 0% / 0.075);
+
 }
 .buttons *  {
    padding: 8px;
    border-radius: 8px;
+   border: none;
+   cursor: pointer;
+   transition: background-color 0.3s;
+}
+.buttons *:hover  {
+  background-color: #ddd;
 }
 .remove-All, .unread-All {
   background: linear-gradient(to bottom, #FF6961, #C82323);
@@ -333,4 +552,55 @@ form {
 }
 .ascend-All, .descend-All {
   background-color: #9750DD;
+}
+
+/* Tabular Images */
+
+.tape {
+  width: 50px;
+  height: auto;
+  position: absolute;
+}
+
+.tape1 {
+  top: 25%;
+  z-index: 1;
+  width: 100px;
+  opacity: 0.5;
+  left: -15%;
+  overflow: hidden;
+}
+.tape2 {
+  top: -30px;
+  z-index: 0;
+  width: 100px;
+  opacity: 1;
+  right: -50px;
+}
+.tape3 {
+  width: 250px;
+  top: 0;
+  opacity: 0.3;
+  bottom: 0;
+  right: 0;
+  left: 0;
+  margin: auto;
+}
+
+.main-img-1 {
+  width: 400px;
+  right: 13%;
+  position: fixed;
+}
+.main-img-2 {
+  width: 500px;
+  position: fixed;
+  bottom: 0;
+  left: 20%;
+  /* margin: auto; */
+  opacity: .7;
+}
+.aside {
+  background-color: #E3F2FD; /* Soft Blue */
+  color: #2C3E50;
 }
