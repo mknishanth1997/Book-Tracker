@@ -120,6 +120,12 @@
   font-weight: 400;
   font-style: normal;
 }
+.great-vibes-regular {
+  font-family: "Great Vibes", cursive;
+  font-weight: 400;
+  font-style: normal;
+}
+
 
 
 body {
@@ -397,6 +403,7 @@ font-family: "Permanent Marker" ;
 .authour-name, .total-pages, .total-pages-completed {
   font-size: 20px;
   margin-top: 8px;
+  /* font-family: "Great Vibes"; */
 }
 .fav-quote {
   font-size: 20px;
@@ -541,17 +548,76 @@ font-family: "Permanent Marker" ;
    cursor: pointer;
    transition: background-color 0.3s;
 }
-.buttons *:hover  {
-  background-color: #ddd;
+
+
+.remove-All {
+  background-color: #FF4C4C;
+  color: #FFFFFF;
+  transition: background-color 0.3s;
 }
-.remove-All, .unread-All {
-  background: linear-gradient(to bottom, #FF6961, #C82323);
+.remove-All:hover {
+  background-color: #E63939;
 }
-.display-All, .read-All {
-  background: linear-gradient(to bottom, #90EE90, #32CD32);
+.remove-All:active {
+  background-color: #CC3333;
 }
-.ascend-All, .descend-All {
-  background-color: #9750DD;
+.display-All {
+  background-color: #4CAF50;
+  color: #FFFFFF;
+}
+.display-All:hover {
+  background-color: #45A049;
+}
+.display-All:active {
+  background-color: #388E3C;
+}
+
+.read-All {
+  background-color: #FFD700;
+  color: #333333;
+}
+.read-All:hover {
+  background-color: #FFC107;
+}
+.read-All:active {
+  background-color: #FFA000;
+}
+
+.unread-All {
+  background-color: #FF8C00;
+  color: #FFFFFF;
+}
+.unread-All:hover {
+  background-color: #FF7F00;
+}.unread-All:active {
+  background-color: #FF6F00;
+}
+
+.ascend-All {
+  background-color: #1E90FF;
+  color: #FFFFFF;
+}
+.ascend-All:hover {
+  background-color: #1C86EE;
+}
+.ascend-All:active {
+  background-color: #1874CD;
+}
+
+.descend-All {
+  background-color: #800080;
+  color: #FFFFFF;
+}
+.descend-All:hover {
+  background-color: #6A0DAD;
+}
+.descend-All:active {
+  background-color: #5B0E8A;
+
+}
+.buttons *:active {
+  transition: background-color 0.2s ease, transform 0.1s ease;
+  transform: scale(0.98);
 }
 
 /* Tabular Images */
@@ -604,3 +670,4 @@ font-family: "Permanent Marker" ;
   background-color: #E3F2FD; /* Soft Blue */
   color: #2C3E50;
 }
+
